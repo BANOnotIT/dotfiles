@@ -2,9 +2,9 @@
 #sudo apt install zsh
 
 # installing oh-my-zsh
-#RUNZSH=no
-#KEEP_ZSHRC=no
-#exec sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+RUNZSH=no
+KEEP_ZSHRC=no
+exec sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # installing plugins
 git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
