@@ -1,10 +1,10 @@
 # installing zsh
-#sudo apt install zsh
+sudo apt install zsh
 
 # installing oh-my-zsh
-#export RUNZSH=no
-#export KEEP_ZSHRC=no
-#sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+export RUNZSH=no
+export KEEP_ZSHRC=no
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # installing plugins
 git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -14,7 +14,7 @@ sed -i "s/^plugins=(.*)/plugins=(git zsh-autosuggestions extract zsh-history-sub
 
 # installing powelevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-sed -i "s/^ZSH_THEME=.*/ZSH_THEME=powerlevel10k/powerlevel10k/g" .zshrc
+sed -i "s/^ZSH_THEME=.*/ZSH_THEME=powerlevel10k\/powerlevel10k/g" .zshrc
 
 # running zsh
 exec zsh -l
