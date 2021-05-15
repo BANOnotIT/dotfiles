@@ -33,17 +33,27 @@ Plug 'airblade/vim-gitgutter'
 Plug 'gioele/vim-autoswap'
 Plug 'Karmenzind/vim-tmuxlike'
 
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'jaredgorski/SpaceCamp'
+
+Plug 'mogelbrod/vim-jsonpath'
+
+Plug 'tomasiser/vim-code-dark'
+
 call plug#end()
 
 
 let g:airline_symbols_ascii = 1
 "let g:airline_statusline_ontop = 1
 
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
 " For git gutter
-highlight GitGutterAdd ctermbg=green ctermfg=black
-highlight GitGutterChange ctermbg=yellow ctermfg=black
-highlight GitGutterDelete ctermbg=red ctermfg=black
-highlight SignColumn ctermbg=black
+colorscheme spacecamp
+hi Normal guibg=#121212 ctermbg=NONE
+hi! link EndOfBuffer Normal
 
 " For NERDtree
 let g:NERDTreeGitStatusIndicatorMapCustom = {
