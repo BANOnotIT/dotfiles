@@ -1,0 +1,82 @@
+# Inserts a blank line between shell prompts
+add_newline = false
+
+command_timeout = 1000
+
+format="""
+\n\
+$directory\
+($git_branch$git_status$git_state) \
+$python\
+$fill\
+$status\
+$cmd_duration $time\
+\n\
+$character
+"""
+
+
+[package]
+disabled = true
+
+[fill]
+symbol=" "
+style="none"
+
+[time]
+disabled = false
+format = "[$time]($style)"
+style="8"
+
+[directory]
+truncate_to_repo = false
+read_only=" !w"
+format="[$read_only]($read_only_style)[ $path ]($style)"
+style="bg:blue fg:white bold"
+read_only_style="bg:blue fg:white"
+truncation_length = 10
+
+
+[git_branch]
+style="bg:green fg:black "
+format="[ $branch ]($style)"
+
+[git_status]
+conflicted = "!$count"
+ahead = "^$count"
+behind = "v$count"
+diverged = "^${ahead_count}v$behind_count"
+up_to_date = ""
+untracked = " ?$count"
+stashed = " *$count"
+modified = " [~$count](bold yellow)"
+staged = ' [+$count](green bold)'
+renamed = " =$count"
+deleted = " [-$count](red)"
+format = """
+[(| $ahead_behind )](bg:green black)\
+[( $conflicted )](bg:red fg:black bold)\
+[$staged$modified$renamed$deleted]($style)\
+[$stashed$untracked](8)\
+"""
+style = "yellow"
+
+[cmd_duration]
+format = "[$duration](bold yellow)"
+
+
+[python]
+symbol="py "
+style="blue"
+version_format="v${major}.${minor}"
+python_binary=["python3", "python"]
+
+[nodejs]
+# disabled = true
+symbol="node "
+style="green"
+version_format="v${major}"
+
+[status]
+disabled = false
+map_symbol = true
