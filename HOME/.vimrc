@@ -1,5 +1,6 @@
 set nu
 set autoindent
+set hlsearch
 
 " For ctrlspace
 set nocompatible
@@ -39,6 +40,7 @@ Plug 'jaredgorski/SpaceCamp'
 Plug 'mogelbrod/vim-jsonpath'
 
 Plug 'tomasiser/vim-code-dark'
+Plug 'cespare/vim-toml'
 
 call plug#end()
 
