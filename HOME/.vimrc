@@ -72,3 +72,6 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ }
 let g:NERDTreeGitStatusConcealBrackets = 1
 nmap <C-\> :NERDTreeToggle<CR>
+
+
+set directory^=$HOME/.vim/swap//
