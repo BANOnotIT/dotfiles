@@ -9,11 +9,16 @@ $directory\
 ($git_branch$git_status$git_state) \
 $python\
 $fill\
+$username\
+$hostname\
 $status\
-$cmd_duration $time\
+$jobs\
+$cmd_duration\
+$time\
 \n\
 $character
 """
+
 
 
 [package]
@@ -78,5 +83,18 @@ style="green"
 version_format="v${major}"
 
 [status]
+symbol="E"
 disabled = false
-map_symbol = true
+
+[jobs]
+symbol="*"
+number_threshold=2
+
+[username]
+style_user="dimmed"
+style_root="red bold"
+format="[$user]($style)"
+
+[hostname]
+style="dimmed green"
+format="[@](dimmed)[$hostname]($style) "
