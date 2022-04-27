@@ -1,17 +1,10 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block, everything else may go below.
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
-
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/.local/share/npm/bin:$HOME/.local/share/flutter/bin:$HOME/.cargo/bin:$HOME/.gem/ruby/2.5.0/bin
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="$HOME/.poetry/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/banonotit/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -126,7 +119,7 @@ alias ta="task add"
 alias tx="task context"
 alias gpft="gp --follow-tags"
 
-path+=('/home/banonotit/.local/bin')
+path+=("$HOME/.local/bin")
 
 # bug fix
 #zstyle ':completion:*' matcher-list 'r:|=*' 'l:|=* r:|=*'
