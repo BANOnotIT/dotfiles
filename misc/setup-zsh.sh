@@ -12,9 +12,5 @@ git clone --depth=1 https://github.com/zsh-users/zsh-history-substring-search ${
 git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 sed -i "s/^plugins=(.*)/plugins=(zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting extract git systemd ufw)/g" .zshrc
 
-# installing powelevel10k
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-sed -i "s/^ZSH_THEME=.*/ZSH_THEME=powerlevel10k\/powerlevel10k/g" .zshrc
-
 # running zsh
 exec zsh -l
