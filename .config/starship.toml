@@ -5,12 +5,12 @@ command_timeout = 1000
 
 format="""
 \n\
+$username\
+$hostname\
 $directory\
 ($git_branch$git_status$git_state) \
 $python\
 $fill\
-$username\
-$hostname\
 $status\
 $jobs\
 $cmd_duration\
