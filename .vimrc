@@ -10,23 +10,23 @@ set encoding=utf-8
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'easymotion/vim-easymotion'
+" Plug 'easymotion/vim-easymotion'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'tomtom/tcomment_vim'
 
 Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-fugitive'
-Plug 'bling/vim-bufferline'
+" Plug 'tpope/vim-fugitive'
+" Plug 'bling/vim-bufferline'
 
 Plug 'vim-ctrlspace/vim-ctrlspace'
 
 Plug 'machakann/vim-highlightedyank'
-Plug 'tpope/vim-surround'
+" Plug 'tpope/vim-surround'
 
 Plug 'preservim/nerdtree'
 "Plug 'scrooloose/nerdtree-project-plugin'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Plug 'mhinz/vim-signify'
 Plug 'airblade/vim-gitgutter'
@@ -34,13 +34,15 @@ Plug 'airblade/vim-gitgutter'
 Plug 'gioele/vim-autoswap'
 Plug 'Karmenzind/vim-tmuxlike'
 
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
+" Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'jaredgorski/SpaceCamp'
 
-Plug 'mogelbrod/vim-jsonpath'
+" Plug 'mogelbrod/vim-jsonpath'
 
-Plug 'tomasiser/vim-code-dark'
+" Plug 'tomasiser/vim-code-dark'
 Plug 'cespare/vim-toml'
+
+Plug 'wgwoods/vim-systemd-syntax'
 
 call plug#end()
 
