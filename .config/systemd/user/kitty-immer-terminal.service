@@ -1,0 +1,15 @@
+[Unit]
+Description=Kitty immer
+StartLimitIntervalSec=4m
+StartLimitBurst=20
+Wants=gnome-session-initialized.target
+After=gnome-session-initialized.target
+
+[Service]
+# Type=simple
+Restart=always
+ExecStart=%h/.local/bin/kitty
+ExecStartPost=%h/.local/bin/prepare-immer-kitten.sh kitty kitten-immer
+
+[Install]
+WantedBy=gnome-session.target
